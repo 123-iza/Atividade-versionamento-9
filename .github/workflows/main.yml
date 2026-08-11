@@ -1,0 +1,21 @@
+name: Guardiao do Codigo
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 1. Baixando o codigo do repositorio
+        uses: actions/checkout@v3
+
+      - name: 2. Configurando o ambiente Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: 4.5. Executando testes automatizados
+        run: |
+          echo "Iniciando bateria de testes..."
+          node test.js
