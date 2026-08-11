@@ -9,7 +9,7 @@ function saudacao(nome) {
 // Função de Calcular
 function calcular(a, b, operacao) {
     if (operacao === 'soma') {
-        return a - b;
+        return a + b;
     }
     if (operacao === 'divisao') {
         if (b === 0) {
